@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            New link text
+            I was changed on the Feature branch
           </a>
         </header>
       </div>
