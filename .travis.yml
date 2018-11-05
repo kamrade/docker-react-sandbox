@@ -7,3 +7,19 @@ before_install:
 
 script:
   - docker run kamrade/docker-react-sandbox npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region:  "us-east-2"
+  app: "docker-react-sandbox"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-2-050120298970"
+  bucket_path: "docker-react-sandbox"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+
+
+
